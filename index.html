@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="dist/bundle.css" type="text/css" >
+</head>
+<body>
+    <header class="header">
+        <div class="inner">
+            TODOList
+        </div>
+    </header>
+
+    <div class="container">
+    
+  
+  
+
+    <div class="items">
+        <ul class="list-items">
+            
+        </ul>
+    </div>
+
+    <div class="filter-block">
+         <input class="filter filter-title" type="text" name="title" placeholder="search by title">
+         <select class="filter filter-status">
+             <option value="all" selected>all</option>
+             <option value="open">open</option>
+             <option value="done">done</option>
+         </select>
+         <select class="filter filter-priority">
+             <option value="all" selected>all</option>
+             <option value="high">high</option>
+             <option value="normal">normal</option>
+             <option value="low">low</option>
+         </select>
+         <a class="btn" href="#create_popup">Create</a>
+     </div>
+
+    <div id="create_popup" class="overlay">
+        <div class="popup">
+            <input type="text" placeholder="title" name="create_title">
+            <input type="text" placeholder="description" name="create_description">
+            <select name="create_priority">
+                <option value="high" selected>high</option>
+                <option value="normal">normal</option>
+                <option value="low">low</option>
+            </select>
+            <div class="popup-footer">
+                <button class="btn btn-add-item">Save</button>
+                <a class="btn close" href="#">Cancel</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="edit_popup" class="overlay">
+        <div class="popup">
+            <input class="edit_title" type="text" placeholder="title">
+            <textarea type="text" placeholder="description" class="edit_description"></textarea>
+            <select class="edit_priority">
+                <option value="high">high</option>
+                <option value="normal">normal</option>
+                <option value="low">low</option>
+            </select>
+           <div class="popup-footer">
+                <button class="btn btn-update">Save</button>
+                <a class="btn close" href="#">Cancel</a>
+            </div>
+        </div>
+    </div>
+    <div id="todo_items" class="todo-items">
+        
+    </div>
+
+    </div>
+    <footer class="footer">
+        <div class="inner">
+            Anton Vakulenchyk
+        </div>
+    </footer>
+    <script type="text/javascript" src="dist/bundle.js"></script>
+</body>
+</html>
