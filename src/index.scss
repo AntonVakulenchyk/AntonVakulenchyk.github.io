@@ -24,6 +24,7 @@ p {
 	background-color: #c7c7c7;
 	position: fixed;
 	height: 50px;
+	z-index: 10;
 	line-height: 50px;
 	padding: 0 15px;
 	left: 0;
@@ -57,12 +58,18 @@ p {
 	width: 100%;
 	flex-wrap: wrap;
 	margin: -20px 0 0 -20px;
-
+	@media (max-width: 576px) {
+		margin: 0;
+	}
 	.item {
 		margin: 20px 0 0 20px;
 		width: calc(100% * (1/3) - 20px - 1px);
 		border: 1px solid #eee;
-
+ 	 	@media (max-width: 576px) {
+ 	 		width: 100%;
+ 	 		margin-right: 0;
+ 	 		margin-left: 0;
+ 	 	}
 		.item-inner {
 			padding: 15px 10px;
 			height: 100%;
@@ -201,6 +208,10 @@ p {
   width: 30%;
   position: relative;
   transition: all .3s ease-in-out;
+
+  @media (max-width: 768px) {
+  	width: 90%;
+  }
   
   &> * {
   	width: 100%;
