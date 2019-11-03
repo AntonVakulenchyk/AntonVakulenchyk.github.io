@@ -77,7 +77,6 @@ p {
 			padding-bottom: 60px;
 			&.done {
 				position: relative;
-				pointer-events: none;
 				&::before {
 					content: '';
 					background-color: rgba(0,0,0,.3);	
