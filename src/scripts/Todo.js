@@ -143,6 +143,9 @@ class Todo {
     mockData.push(newItem);
     document.getElementsByName('create_title')[0].value = '';
     document.getElementsByName('create_description')[0].value = '';
+    document.querySelector('.filter-title').value = '';
+    document.querySelector('.filter-priority').value = 'all';
+    document.querySelector('.filter-status').value = 'all';
     this.render();
   }
 
